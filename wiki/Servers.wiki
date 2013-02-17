@@ -1,5 +1,9 @@
 #summary RTMFP Servers.
 
+We work mainly on the client part of the API,<br>
+but you still need a *rendez-vous* server if you<br>
+want to use the API outside of a LAN, so here the info.
+
 == Adobe ==
 
   * [http://labs.adobe.com/technologies/stratus/ Adobe Labs] *Stratus* (not available anymore)
