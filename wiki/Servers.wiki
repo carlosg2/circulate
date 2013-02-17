@@ -2,11 +2,40 @@
 
 == Adobe ==
 
-  * [http://labs.adobe.com/technologies/stratus/ Adobe Labs *Stratus*] (not available anymore)
-  * [http://labs.adobe.com/technologies/cirrus/ Adobe Labs *Cirrus*] (current)
+  * [http://labs.adobe.com/technologies/stratus/ Adobe Labs] *Stratus* (not available anymore)
+  * Adobe Media Server 4 (only RTMFP v1, no groups)
+  * Adobe Media Server 5 (only RTMFP v1, no groups)
+  * [http://labs.adobe.com/technologies/cirrus/ Adobe Labs] *Cirrus* (current)
+    * also referred as *Cirrus 2*
+    * [http://www.adobe.com/cfusion/entitlement/index.cfm?e=cirrus Sign up for a Cirrus developer key]
+
+As of today none of the commercial Adobe servers allow to use RTMFP groups<br>
+which allow swarming and multicast.
+
+Cirrus 2 does allow that
+<pre>
+Cirrus is a hosted peer introduction service that facilitates establishing communication
+between Flash Player clients or Adobe AIR endpoints using RTMFP. Flash Player endpoints
+must stay connected to the server during the entire time of communications.
+Unlike Flash Media Server, Cirrus does not stream video or support media relay,
+shared objects, or scripting. Cirrus is being made available as a beta service through
+Adobe Labs to allow our developer community to begin building applications using RTMFP.
+</pre>
+but with few gotcha
+  * need a developer key
+  * can not be used for commercial applications
+  * is considered a free beta service
+
+and somewhere in the FAQ
+<pre>
+There is no commercial offering today with the new RTMFP Groups technology.
+</pre>
 
 
 == Open Source ==
 
+TODO
 
 == Others ==
+
+TODO
