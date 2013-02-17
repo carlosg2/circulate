@@ -2,6 +2,9 @@
 
 == Adobe ==
 
+  * [http://labs.adobe.com/technologies/stratus/ Adobe Labs *Stratus*] (not available anymore)
+  * [http://labs.adobe.com/technologies/cirrus/ Adobe Labs *Cirrus*] (current)
+
 
 == Open Source ==
 
