@@ -25,6 +25,16 @@ but with few gotcha
   * need a developer key
   * can not be used for commercial applications
   * is considered a free beta service
+  * if somehow you plan/manage to connect 10.000 or so user you need<br>communicate with Adobe via the [http://forums.adobe.com/community/labs/cirrus Cirrus forum]
+
+for example (see [http://forums.adobe.com/message/5014530#5014530 Does Cirrus limit the number of connections ?])<br>
+answer:<br>
+<pre>
+Codename Cirrus currently has no limit to the number of connections per developer key.
+ 
+we ask that you let us know if you'll exceed 10,000 concurrent connections for purposes of resource & capacity planning.
+</pre>
+
 
 and somewhere in the FAQ
 <pre>
