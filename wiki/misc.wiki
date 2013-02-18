@@ -69,7 +69,7 @@ would be good to know what is the hardware/bandwidth spec of this server
 }}}
 allow to create chat room with an *op* who can kick/ban, create shared files protected by passwords etc.
 
-Now we need to be able to pass this password around in a secure way (encryption),
+Now we need to be able to pass this password around in a secure way (encryption),<br>
 see if we can reuse the nonce of a specific connection
 
 
@@ -78,3 +78,27 @@ see if we can reuse the nonce of a specific connection
 > between 0000000000000000000000000000000000000000000000000000000000000000
 >      and ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.
 }}}
+
+so this is the range of peerID
+
+{{{
+> the NetConnection.farID is the ID of the RTMFP server to which you're connected. 
+> the NetStream.farID of the subscribing/playing peer should match
+> the NetConnection.nearID of the publishing peer.
+> on the publishing end, the publishing NetStream has a property "peerStreams",
+> which contains a separate NetStream for each connected subscribing peer.
+> a member of that array will have a farID that matches the nearID of the subscribing peer.
+}}}
+
+so what happen when we connect serverless ? no farID for the netconnection ?
+
+and for netstream, if we keep a list of "known peerID", we should be able to know<br>
+who is connected to which streams
+
+{{{
+> the maximum number of DIRECT_CONNECTIONS NetStreams in one NetConnection
+> is controlled by NetConnection.maxPeerConnections.
+> the default is 8, but you can change it to anything.
+}}}
+
+
