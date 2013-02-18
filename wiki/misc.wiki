@@ -5,3 +5,10 @@
 
 `> Cirrus will only bootstrap 16 groups per NetConnection.`<br>
 so max 16 active groups per network ?
+
+{{{
+> Codename Cirrus currently has no limit to the number of connections per developer key.
+> we ask that you let us know if you'll exceed 10,000 concurrent connections for purposes
+> of resource & capacity planning.
+}}}
+would be good to know what is the hardware/bandwidth spec of this server
