@@ -76,5 +76,5 @@ see if we can reuse the nonce of a specific connection
 {{{
 > peer IDs are cryptographically pseudorandom and are evenly distributed
 > between 0000000000000000000000000000000000000000000000000000000000000000
->        and ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.
+>      and ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.
 }}}
