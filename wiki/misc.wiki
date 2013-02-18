@@ -1,0 +1,9 @@
+#summary misc.
+
+== found in forums etc. ==
+
+<pre>
+> Cirrus will only bootstrap 16 groups per NetConnection.
+</pre>
+
+so max 16 active groups per network ?
