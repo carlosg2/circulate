@@ -42,7 +42,7 @@ would be good to know what is the hardware/bandwidth spec of this server
 > to be able to use ByteArray (since that doesn't exist in AMF0).
 }}}
 
-{{{d
+{{{
 > object replication is designed and tuned for fully reliable and reasonably
 > fair diffusion of large amounts of data.  it is not tuned for real-time distribution.
 > the "recompute which neighbors have what data" timer fires every 10 seconds,
