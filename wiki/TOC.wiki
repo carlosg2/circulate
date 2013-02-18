@@ -13,5 +13,6 @@
     * [Examples Examples]
     * [Tutorials Tutorials]
     * [FAQ FAQ]
+    * [misc misc. notes]
 
   
