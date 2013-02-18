@@ -1,5 +1,16 @@
 #summary misc.
 
+== found in cirrus FAQ ==
+
+{{{
+Developers will need to provide a mechanism for exchanging peer identities
+between instances of application through their own intermediary
+(e.g., using HTTP web services, XML sockets to a presence server, etc.).
+}}}
+
+even if RTMFP provide a lot of things, there is no mechanism to remember<br>
+for ex a user name and associate it with a peerID, it would be nice to provide that.
+
 == found in forums etc. ==
 
 {{{
@@ -13,3 +24,57 @@ so max 16 active groups per network ?
 > of resource & capacity planning.
 }}}
 would be good to know what is the hardware/bandwidth spec of this server
+
+{{{
+> there should be an event eventually, after a 90-ish second timeout.
+> if you enter a completely invalid peer ID (not composed entirely of hex digits,
+> not an even number of digits), you'll get an error event almost immediately. 
+> if the peer ID isn't exactly 64 hex digits long, it won't work, because peer IDs
+> are currently always 64 digits (256 bits) long.  however, it still tries,
+> so you'll get the error event after the timeout.
+}}}
+
+{{{
+> sendToAllNeighbors can send any AMF serializable object, including ByteArray
+> (or Object, with ByteArray properties, if you want). 
+> so can (NetGroup.) sendToNearest, sendToNeighbor, post, writeRequestedObject, and NetStream.send.
+> you might need to set the NetConnection's defaultObjectEncoding to AMF3 (flash.net.ObjectEncoding.AMF3)
+> to be able to use ByteArray (since that doesn't exist in AMF0).
+}}}
+
+{{{d
+> object replication is designed and tuned for fully reliable and reasonably
+> fair diffusion of large amounts of data.  it is not tuned for real-time distribution.
+> the "recompute which neighbors have what data" timer fires every 10 seconds,
+> which is what you're observing.
+> the 10 second timer duration is compiled into RTMFP and can't be changed from ActionScript.
+> if you require full reliability but you also want timely delivery,
+> and only one peer is sending data, you could do a hybrid of P2P multicast
+> (with NetStream.send()) and object replication. you could do a removeWantObjects()
+> on receiving the data over multicast, and maybe delay doing an addHaveObjects()
+> of the new sequence numbers for at least the multicast window duration + relay margin
+> duration to try to avoid duplicating data on the network.
+}}}
+
+{{{
+> if you're using a NetGroup posting and/or multicast,
+> you can set a password for using those functions.
+> you then have two groupspecs:
+> the groupspecWithAuthorizations, which you give to the "master peer"
+> and which allows it to use those functions,
+> and the groupspecWithoutAuthorizations,
+> which you give to all non-master peers
+> and which allows them to receive postings and/or multicasts
+> but not send/publish.
+}}}
+allow to create chat room with an *op* who can kick/ban, create shared files protected by passwords etc.
+
+Now we need to be able to pass this password around in a secure way (encryption),
+see if we can reuse the nonce of a specific connection
+
+
+{{{
+> peer IDs are cryptographically pseudorandom and are evenly distributed
+> between 0000000000000000000000000000000000000000000000000000000000000000
+>        and ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.
+}}}
