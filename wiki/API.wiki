@@ -87,7 +87,7 @@ it can be automatically serialized/deserialized ( using AMF and !ByteArray).
 
 
 
-*Ring*: (see [http://en.wikipedia.org/wiki/Network_topology#Ring wikipedia]<br>
+*Ring*: (see [http://en.wikipedia.org/wiki/Network_topology#Ring wikipedia])<br>
 <pre>
 A network topology that is set up in a circular fashion in which data travels around the
 ring in one direction and each device on the right acts as a repeater to keep the signal
