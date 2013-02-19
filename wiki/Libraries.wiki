@@ -1,0 +1,9 @@
+#summary Other RTMFP libraries.
+
+== Open Source ==
+
+  * [https://github.com/tomkrcha/RealtimeGameLib RealtimeGameLib]  (AS3)<br>Simple library for building multiplayer realtime games using P2P (and Flash Media Server).
+  * [http://code.google.com/p/cocoon-p2p/ Cocoon P2P] (AS3)<br>P2P library for ActionScript/Flex/AIR focussed on local IP multicast.
+  * [https://github.com/yicui/BitTube-on-Flash BitTube-on-Flash] (AS3)<br>The brand new BitTube system based on the Adobe RTMFP protocol.
+  * [http://code.google.com/p/projectstratosphere/ Project Stratosphere] (AS3)<br>A network platform using Adobe Stratus.
+  * [https://github.com/itoz/itoz.jp_RTMFP-serverless-/ RTMFP Serverless] (AS3)<br>Serverless mode RTMFP library.
