@@ -13,6 +13,9 @@ then we will make our best effort to keep it compatible for Linux runtimes<br>
 this could involve special "hooks" like conditional compilation etc.
 
 
+We are directly influenced by the design of the RTMFP API<br>
+and should be aware of that at all time.
+
 It should be possible to have more than one Network running in parallel,<br>
 but it is not high in the priorities of the API.
 
@@ -28,8 +31,30 @@ We need to define different types of Commands,<br>
 and define a default mechanism to transfer those commands<br>
 and serialize/deserialize them.
 
+We want to minimize the use of the term "P2P" in favour of more generic terms;<br>
+for ex: favour `LocalNetworkArea` over `P2PLocalNetwork`
+
+<br>
+<br>
+
+== Dependencies ==
+
+*!NetConnection*:<br>
+creates a two-way connection between a client and a server.
+
+*!NetGroup*:<br>
+represents membership in an RTMFP group.
+
+*!NetStream*:<br>
+ opens a one-way streaming channel over a !NetConnection.
+
+*!GroupSpecifier*:<br>
+ is used to construct the opaque `groupspec` strings<br>
+that can be passed to !NetStream and !NetGroup constructors
 
 
+<br>
+<br>
 
 == Vocabulary ==
 
@@ -48,13 +73,18 @@ Can be associated with only one !NetGroup or one !NetStream.<br>
 
 
 *Client*:<br>
-
+An endpoint on the Network
 
 
 *Command*:<br>
+Network Commands are used as "control protocol" over the Network.<br>
 
 
 *Packet*:<br>
+A low-level message transfered over the network<br>
+which allows to transport a Command in such a way<br>
+it can be automatically serialized/deserialized ( using AMF and !ByteArray).
+
 
 
 *Ring*: (see [http://en.wikipedia.org/wiki/Network_topology#Ring wikipedia]<br>
@@ -67,3 +97,14 @@ on the ability of the signal to travel around the ring. When a device sends data
 travel through each device on the ring until it reaches its destination. Every node is a
 critical link.
 </pre>
+
+*Node ring*:<br>
+Visual representing the Node as a circle.
+
+*Ring Position*:<br>
+In our case, the ring topology is applied to the Clients connected to a particular Node;<br>
+so the ring position would be then the position of a client "address" on a circle representing the Node (the Node ring).
+
+
+*Command Center*:<br>
+Special Node responsible for receiving and dispatching network commands.
