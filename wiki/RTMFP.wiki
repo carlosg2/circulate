@@ -18,9 +18,35 @@ instances of the Adobe® Flash® Player client and applications built using the 
 for the delivery of rich, live, real-time communication.
 }}}
 
+from [http://help.adobe.com/en_US/flashmediaserver/devguide/WSa4cb07693d123884520b86f312a354ba36d-7fff.html Flash Media Server 3.5 docs]
+{{{
+RTMFP is built on User Datagram Protocol (UDP).
+RTMP is built on Transmission Control Protocol (TCP).
+UDP provides lower latency than TCP.
+It also enables end-to-end peering—that is, direct data transmission between two clients.
+}}}
+{{{
+Although RTMFP is often used for peer-assisted networking applications,
+you can use RTMFP in unicast, broadcast, and multi-point publishing applications as well.
+}}}
+
 == Features ==
+  * *NAT/firewall traversal*
+  * *Congestion control and prioritization*
   * *Rapid connection restore:* Connections are reestablished quickly after brief outages, for example, when a wireless network connection experiences a dropout. After reconnection, the connection has full capabilities instantly.
-  * *IP mobility:* Active network sessions are maintained even if a client changes to a new IP address. For example, when a laptop on a wireless network is plugged into a wired connection, the connection will not be interrupted. This is a critical requirement for communication or live solutions.
+  * *IP address mobility:* Active network sessions are maintained even if a client changes to a new IP address. For example, when a laptop on a wireless network is plugged into a wired connection, the connection will not be interrupted. This is a critical requirement for communication or live solutions.
+
+== Security ==
+
+from [http://help.adobe.com/en_US/flashmediaserver/devguide/WSa4cb07693d123884520b86f312a354ba36d-7fff.html Flash Media Server 3.5 docs]
+{{{
+RTMFP network traffic is encrypted with a 128-bit cipher.
+To play a stream over RTMFP, a client must know the name of the stream and know the peer ID of the publisher.
+The peer ID is a 256-bit value associated with the publisher's identity.
+The publisher must accept a peer request before a connection is made.
+}}}
+
+
 
 == History ==
 
