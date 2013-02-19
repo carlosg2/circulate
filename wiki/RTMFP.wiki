@@ -1,0 +1,43 @@
+#summary Real Time Media Flow Protocol.
+
+== Introduction ==
+
+from [ wikipedia]
+{{{
+The *Secure Real-Time Media Flow Protocol* (RTMFP) is
+a proprietary protocol suite developed by Adobe Systems
+for encrypted, efficient multimedia delivery through both
+client-server and peer-to-peer models over the Internet.
+}}}
+
+from [http://www.adobe.com/products/adobe-media-server-extended/rtmfp-faq.html RTFMP FAQ]
+{{{
+The Real-Time Media Flow Protocol (RTMFP) is a communication protocol from Adobe
+that enables direct end user to end user peering communication between multiple
+instances of the Adobe® Flash® Player client and applications built using the Adobe AIR® framework
+for the delivery of rich, live, real-time communication.
+}}}
+
+== Features ==
+  * *Rapid connection restore:* Connections are reestablished quickly after brief outages, for example, when a wireless network connection experiences a dropout. After reconnection, the connection has full capabilities instantly.
+  * *IP mobility:* Active network sessions are maintained even if a client changes to a new IP address. For example, when a laptop on a wireless network is plugged into a wired connection, the connection will not be interrupted. This is a critical requirement for communication or live solutions.
+
+== History ==
+
+TODO
+
+*MFP*: Media Flow Protocol
+
+== Ressources ==
+
+*links:*
+ * [http://www.adobe.com/products/adobe-media-server-extended/rtmfp-faq.html RTMFP FAQ] (Adobe)
+ * [http://tools.ietf.org/html/draft-thornburgh-adobe-rtmfp Adobe's Secure Real-Time Media Flow Protocol (Internet-Draft) ] (Adobe, IETF)
+ * TODO
+
+*documents:*
+ * (PDF) test
+ * (PDF) test
+ * (PDF) test
+
+TODO: use only links or documents, or both ?
