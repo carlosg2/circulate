@@ -57,8 +57,39 @@ connections for purposes of resource & capacity planning.
 
 == Open Source ==
 
+  * [https://github.com/OpenRTMFP/Cumulus Cumulus] (C++)<br>CumulusServer is a complete open source and cross-platform RTMFP server extensible by way of scripting.<br>main stable features are:
+    * P2P rendez-vous service
+    * Live streaming
+    * RPC, pull, push exchanges, indeed all AMF possible exchanges between client and server
+    * Scripting engine to create your own application server or extends Cumulus features
+    * Scalability and load-balancing solution
+  * [https://github.com/OpenRTMFP/ArcusNode ArcusNode] (node.js / JavaScript / C++)<br>A RTMFP Rendevouz Server For Peer Assisted Networking With Adobe Flash on NodeJS.<br>covers the following features already:
+    * P2P Rendezvouz service
+    * NetGroups
+    * Remote Methods / Commands
+    * Authentication
+    * Plugins
+  * [http://code.google.com/p/rtmplite/source/browse/trunk/rtmfp.py rtmfp.py] from [http://code.google.com/p/rtmplite/ RTMPlite] (Python)<br>Experimental rendezvous server for RTMFP in pure Python.
+
 TODO
 
 == Others ==
 
-TODO
+List of RTMP servers (from FlashRealtime - [http://www.flashrealtime.com/list-of-available-rtmp-servers/ List of available RTMP servers] )
+
+=== Adobe ===
+  * [http://www.adobe.com/products/flashmediaserver/ Flash Media Server]
+  * [http://www.adobe.com/products/livecycle/dataservices/ LiveCycle DS]
+
+=== Non-Adobe ===
+  * 
+  * [http://osflash.org/red5 Red5] (Java)
+  * [http://www.wowzamedia.com/ Wowza] (Java)
+  * [http://www.themidnightcoders.com/products.html WebOrb] (.NET, Java)
+  * [http://erlyvideo.org/ ErlyVideo] (Erlang)
+  * [http://code.google.com/p/rubyizumi/ RubyIzumi] (Ruby)
+  * [http://www.rtmpd.com/ RTMPD] (C++)
+  * [http://wiki.gnashdev.org/Cygnal Cygnal] (C++)
+  * [http://rtmpy.org/wiki/RTMP RTMPy] (Python)
+  * [http://code.google.com/p/rtmplite/ RTMPlite] (Python)
+  * [http://mammothserver.org/ MammothServer (OpenFMS)] (C++)
