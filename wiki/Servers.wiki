@@ -7,9 +7,13 @@ want to use the API outside of a LAN, so here the info.
 == Adobe ==
 
   * [http://labs.adobe.com/technologies/stratus/ Adobe Labs] *Stratus* (not available anymore)
+    * also referred as *Adobe Stratus P2P rendezvous service*
+    * see [http://gamingnotes.com/?p=1881 Move from Stratus to Adobe Cirrus]
+    * [http://blogs.adobe.com/ktowes/2010/10/introducing-cirrus-the-new-codename-for-stratus.html Introducing “Cirrus” (the new codename for Stratus)]
   * Adobe Media Server 4 (only RTMFP v1, no groups)
   * Adobe Media Server 5 (only RTMFP v1, no groups)
   * [http://labs.adobe.com/technologies/cirrus/ Adobe Labs] *Cirrus* (current)
+    * also referred as *Adobe Cirrus*
     * also referred as *Cirrus 2*
     * [http://www.adobe.com/cfusion/entitlement/index.cfm?e=cirrus Sign up for a Cirrus developer key]
 
