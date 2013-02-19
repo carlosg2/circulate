@@ -1,8 +1,6 @@
 #summary different tutorials to get you started.
 
-== Presos ==
 
-  * [http://tv.adobe.com/watch/max-2009-develop/p2p-on-the-flash-platform-with-rtmfp/ P2P on the Flash Platform with RTMFP] by Matthew Kaufman (Adobe MAX 2009)<br>[http://circulate.googlecode.com/files/P2P%20on%20the%20Flash%20Platform%20with%20RTMFP.pdf P2P on the Flash Platform with RTMFP] (PDF)
-  * [http://tv.adobe.com/watch/max-2011-develop/advanced-p2p-with-rtmfp-tips-and-tricks/ Advanced P2P with RTMFP: Tips and Tricks] by Michael Thornburgh (Adobe MAX 2011)<br>[http://circulate.googlecode.com/files/Advanced%20P2P%20with%20RTMFP%20-%20Tips%20and%20Tricks.pdf Advanced P2P with RTMFP: Tips and Tricks] (PDF)<br>[http://circulate.googlecode.com/files/S4600_Thornburgh-AdvancedP2P_Assets.zip demo source code] (ZIP)
-  * [http://circulate.googlecode.com/files/Go%20Multi-User%20With%20Peer-to-Peer%20in%20Flash%20Player.pdf Go Multi-User With Peer-to-Peer in Flash Player] by Tom Krcha (Adobe) (PDF)
-  * [http://circulate.googlecode.com/files/RTMFP%20Overview%20for%20IETF77%20TSV%20AREA.pdf RTMFP Overview for IETF77 TSV AREA] by Matthew Kaufman (Adobe) (PDF)
+== IRC clone ==
+
+== Torrent clone ==
