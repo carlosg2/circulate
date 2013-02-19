@@ -71,19 +71,26 @@ objects work with each other: !NetGroup, !GroupSpecifier, Clients, etc.
 Can be associated with only one Network.<br>
 Can be associated with only one !NetGroup or one !NetStream.<br>
 
-
 *Client*:<br>
-An endpoint on the Network
+lets you handle each user, or client, connection to a RTMFP Network.<br>
+The Network automatically creates a Client object when a user connects to it.
 
+*Peer ID*:<br>
+Each Client has a peer ID, and the peer ID space is server-specific.<br>
+The peer ID is the SHA256 of the client's Diffie-Hellman public key.<br>
 
 *Command*:<br>
 Network Commands are used as "control protocol" over the Network.<br>
-
 
 *Packet*:<br>
 A low-level message transfered over the network<br>
 which allows to transport a Command in such a way<br>
 it can be automatically serialized/deserialized ( using AMF and !ByteArray).
+
+*Message*:<br>
+ActionScript message serialized in AMF.<br>
+The message can be one of the following types: an Object, an int, a Number, or a String.<br>
+The message cannot be a MovieClip.
 
 
 
