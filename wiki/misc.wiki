@@ -101,4 +101,8 @@ who is connected to which streams
 > the default is 8, but you can change it to anything.
 }}}
 
-
+this can influence the way we build "supergroup",<br>
+for ex: a "command center" type of group would need to not rely at all on DIRECT_CONNECTIONS NetStreams<br>
+and that's easy to solve, just use the NetGroup to communicate "command"s and that way no peer limits;<br>
+but in the case of "using one group to share one file", there it would have a huge influence<br>
+if we use NetStream then maxPeerConnections would be the limit of people who can leech/seed this file.
