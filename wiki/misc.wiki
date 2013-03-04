@@ -106,3 +106,23 @@ for ex: a "command center" type of group would need to not rely at all on DIRECT
 and that's easy to solve, just use the NetGroup to communicate "command"s and that way no peer limits;<br>
 but in the case of "using one group to share one file", there it would have a huge influence<br>
 if we use NetStream then maxPeerConnections would be the limit of people who can leech/seed this file.
+
+
+== other ==
+
+let's emit the theory that we could have server with unlimited possibility<br>
+and could connect any amount of users with rendez-vous server<br>
+<br>
+how many Peer ID could be deal with ?
+
+so a peer ID is [http://en.wikipedia.org/wiki/256-bit 256 bit], that means `2^256`<br>
+from wikipedia
+
+<pre>
+Already 2^128 (128-bit) would greatly exceed the total data stored on Earth as of 2010,
+which has been estimated to be around 1.2 zettabytes (over 2^70 bytes)
+</pre>
+
+We could also use the IP address as an example<br>
+eg. `255.255.255.255` (which translate to 0xFFFFFFFF) in IPv4 is only *32 bits*<br>
+and can deal with all servers,clients,etc. internet connection as of 2012.
