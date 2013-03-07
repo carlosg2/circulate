@@ -108,6 +108,16 @@ but in the case of "using one group to share one file", there it would have a hu
 if we use NetStream then maxPeerConnections would be the limit of people who can leech/seed this file.
 
 
+{{{
+P2P permission dialog
+  - Groups can use upload bandwidth for other members’ traffic
+  - Must be accepted before groups will function
+}}}
+
+only happen with a SWF hosted with the Flash Player plugin (or from a standalone player)<br>
+when in an AIR application, no permission dialog popup
+
+
 == other ==
 
 let's emit the theory that we could have server with unlimited possibility<br>
