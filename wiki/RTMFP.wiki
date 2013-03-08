@@ -75,6 +75,7 @@ TODO
   * [http://gamingnotes.com/?p=1463 Directed Routing Explained in Flash 10.1 P2P] by Tom Krcha (Adobe)
   * [http://gamingnotes.com/?p=1434 P2P GroupSpecifier Class Explained In Details Part 1] by Tom Krcha (Adobe)
   * [http://gamingnotes.com/?p=1266 Simple chat with P2P NetGroup in FP 10.1] by Tom Krcha (Adobe)
+  * [http://gamingnotes.com/?p=1854 The most simple P2P Object Replication Example] by Tom Krcha (Adobe)
   * [http://gamingnotes.com/?p=1727 Video-on-Demand over P2P in Flash Player 10.1 with Object Replication] by Tom Krcha (Adobe)
   * [http://gamingnotes.com/?p=1646 File Sharing over P2P in Flash Player 10.1 with Object Replication] by Tom Krcha (Adobe)
   * [http://gamingnotes.com/?p=1803 Local Flash Peer-to-Peer Communication over LAN (without Cirrus/Stratus)] by Tom Krcha (Adobe)
