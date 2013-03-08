@@ -67,3 +67,19 @@ TODO
   * (PDF) [http://circulate.googlecode.com/files/Advanced%20P2P%20with%20RTMFP%20-%20Tips%20and%20Tricks.pdf Advanced P2P with RTMFP: Tips and Tricks] by Michael Thornburgh (Adobe MAX 2011)<br>(ZIP) [http://circulate.googlecode.com/files/S4600_Thornburgh-AdvancedP2P_Assets.zip demo source code]
   * (PDF) [http://circulate.googlecode.com/files/Go%20Multi-User%20With%20Peer-to-Peer%20in%20Flash%20Player.pdf Go Multi-User With Peer-to-Peer in Flash Player] by Tom Krcha (Adobe)
   * (PDF) [http://circulate.googlecode.com/files/RTMFP%20Overview%20for%20IETF77%20TSV%20AREA.pdf RTMFP Overview for IETF77 TSV AREA] by Matthew Kaufman (Adobe)
+  * (PDF) [http://flashrealtime.com/download/P2P-Or-How-To-Kill-CDNs.pdf P2P or How to kill CDNs?] by Tom Krcha (Adobe)
+
+*tutorials:*
+  * [http://gamingnotes.com/?p=492 Basics of P2P in Flash] by Tom Krcha (Adobe)
+  * [http://gamingnotes.com/?p=1526 Multicast Explained in Flash 10.1 P2P] by Tom Krcha (Adobe)
+  * [http://gamingnotes.com/?p=1463 Directed Routing Explained in Flash 10.1 P2P] by Tom Krcha (Adobe)
+  * [http://gamingnotes.com/?p=1434 P2P GroupSpecifier Class Explained In Details Part 1] by Tom Krcha (Adobe)
+  * [http://gamingnotes.com/?p=1266 Simple chat with P2P NetGroup in FP 10.1] by Tom Krcha (Adobe)
+  * [http://gamingnotes.com/?p=1727 Video-on-Demand over P2P in Flash Player 10.1 with Object Replication] by Tom Krcha (Adobe)
+  * [http://gamingnotes.com/?p=1646 File Sharing over P2P in Flash Player 10.1 with Object Replication] by Tom Krcha (Adobe)
+  * [http://gamingnotes.com/?p=1803 Local Flash Peer-to-Peer Communication over LAN (without Cirrus/Stratus)] by Tom Krcha (Adobe)
+  * [http://gamingnotes.com/?p=2032 P2P Gaming Libs from my MAX 2010 session] by Tom Krcha (Adobe)
+  * [http://gamingnotes.com/?p=2042 MAX Racer Remote Device Controller in AIR for Android] by Tom Krcha (Adobe)
+  * [http://gamingnotes.com/?p=2312 Videotutorial: Controlling the desktop with your mobile device via P2P] by Tom Krcha (Adobe)
+  * [http://gamingnotes.com/?p=1956 Resolving "NetGroup.Connect.Rejected" or when your Flash P2P apps stop working] by Tom Krcha (Adobe)
+  * [http://help.adobe.com/en_US/FlashMediaServer/4.0_Dev/WSa4cb07693d123884520b86f312a354ba36d-8000.html Building peer-assisted networking applications] Flash Media Server  4.0 Developer’s Guide (Adobe)
