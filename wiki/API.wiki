@@ -74,6 +74,27 @@ but for your own need you can rename it to any name you want.
 
 By default we use this name "library.circulate.commandcenter".
 
+The *CommandCenter* is structured in such a way
+  * to work almost like a *ChatNode* but it is not a *ChatNode*
+  * to send commands as fast as possible
+  * to scale up to 1000s of clients
+  * to sync/announce/expire/update/etc. all connected clients
+  * to sync/announce/expire/update/etc. all existing nodes
+  * to serve list of known clients (not invisible client)
+  * to serve list of known nodes (not invisible node)
+  * to broadcast to all known clients (invisible included)
+  * to broadcast to all known nodes (invisible included)
+  * etc.
+
+scenario:<br>
+when 2 clients want to chat in a private node<br>
+the command center allows to connect those 2 clients<br>
+even if they are in different nodes and not connected to each other.<br>
+In this case, the command center can do the invitation, introduction, sync, etc.
+
+
+
+
 <br>
 <br>
 
