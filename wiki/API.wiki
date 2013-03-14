@@ -34,6 +34,46 @@ and serialize/deserialize them.
 We want to minimize the use of the term "P2P" in favour of more generic terms;<br>
 for ex: favour `LocalNetworkArea` over `P2PLocalNetwork`
 
+=== General ===
+
+A *NetworkSystem* connect/disconnect to a network.
+
+A *NetworkNode* allows to organise groups inside the network.
+
+A *NetworkClient* is the user attached to the group.
+
+A *NetworkSystem* contains at least one *NetworkNode* or more.
+
+A *NetworkNode* contains at least one *NetworkClient* or more.
+
+By default, the *NetworkSystem* and any *NetworkNode* always share one local client reference.
+
+=== Command Center ===
+
+The *Command Center* is a special type of *NetworkNode*.
+
+As soon as a *NetworkSystem* creates a *NetConnection*<br>
+the system creates by default the *CommandCenter*.
+
+When a *NetworkSystem* disconnects we keep the *CommandCenter* reference in memory.
+
+A *NetworkClient* can not create or destroy the *CommandCenter*.
+
+The *CommandCenter* always use the same *NetGroup* name and *GroupSpecifier*.
+
+We wire all the *NetworkCommand* trough the *CommandCenter* (hence the name).
+
+Even if a *NetworkClient* is always connected to The *CommandCenter* it can still be invisible to other clients.
+
+Only an admin client can broadcast messages to every single connected *NetworkClient* (invisible or not)<br>
+trough the *CommandCenter*, but it does not mean that an admin can see an invisible client.
+
+A *NetworkSystem* is meant to work with the same *CommandCenter*,<br>
+you can not use more than one *CommandCenter*<br>
+but for your own need you can rename it to any name you want.
+
+By default we use this name "library.circulate.commandcenter".
+
 <br>
 <br>
 
