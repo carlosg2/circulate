@@ -136,3 +136,22 @@ which has been estimated to be around 1.2 zettabytes (over 2^70 bytes)
 We could also use the IP address as an example<br>
 eg. `255.255.255.255` (which translate to 0xFFFFFFFF) in IPv4 is only *32 bits*<br>
 and can deal with all servers,clients,etc. internet connection as of 2012.
+
+
+== performance ==
+
+A bit stupid, but if you use network/node/client etc. using protected override or hook functions<br>
+you can test only with 5/6 instances of the client locally.
+
+If you use Events to reroute/dispatch NetStatusEvent, then you can instantiate 20+ clients<br>
+and everything react faster etc.
+
+
+== visuals ==
+
+Our main logic is to use a *CommandCenter* that connect all clients all the time<br>
+and because each clients has a unique *Peer ID* even in different groups<br>
+we can then map all those clients on a ring based on their unique Peer ID address.
+
+
+
