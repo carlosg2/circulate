@@ -93,6 +93,9 @@ even if they are in different nodes and not connected to each other.<br>
 In this case, the command center can do the invitation, introduction, sync, etc.
 
 
+we can visualise the command center on a ring<br>
+http://circulate.googlecode.com/svn/gfx/commandcenter_visualisation_test.png
+
 
 
 <br>
