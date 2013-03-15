@@ -97,6 +97,78 @@ we can visualise the command center on a ring<br>
 http://circulate.googlecode.com/svn/gfx/commandcenter_visualisation_test.png
 
 
+=== Sharing Files ===
+
+*scenario:* simple file sharing using a Node per file
+
+using commands AnnounceFile/RequestFile
+  # user A announce he got file_123.mp4 (send trough command center)
+  # this create a node OneFileNode with the name of the file
+  # user A become a seeder on this node
+  # user B request file_123.mp4 (again trough command center)
+  # user B become a leecher on this node
+   
+*pros:*
+  * because the node share only one file<br>it simpler to have chunk[0] containing the metadata of the file<br>and split the file in chunks
+  * the file does not necessary need to be loaded in memory<br>it could be pre-sliced on the hard drive
+    {{{
+          eg. files/
+                |_ file_123.mp4
+              shared/
+                |_ file_123.mp4/
+                       |_ 0
+                       |_ 1
+                       |_ 2
+                       |_ ...
+    }}}
+  * we can also have the option to contains the file data in memory<br>this depends on the memory of the client<br>eg. for desktop no problem to share few gigs<br>for mobile not an option
+
+*cons:*
+  * we need one node per file<br>going trough an adobe cirrus server<br>it could limit the max number of file shared
+  * it share only one file<br>so we need a file manager on the side to manage list of files
+       
+       
+*misc:*
+on top of AnnounceFile/RequestFile<br>
+we could have HaveFile and FileList commands
+
+HaveFile would be to announce a file we have on the hard drive<br>
+but already shared in a node<br>
+if someone request the file then we can then Announce the file<br>
+and start to share it
+       
+FileList would allow to share list of files we can share<br>
+without creating any node in the first place
+
+the difference is<br>
+AnnounceFile is for telling others we have a file ready to share<br>
+eg. either pre-sliced on the HDD or loaded in memory<br>
+in both case the node sharingthe file is already created<br>
+and wait for others (user using RequestFile) to connect to the node<br>
+while<br>
+HaveFile is for telling others that we have the file available<br>
+but it is not ready to share as the node to share the file is not created yet<br>
+and by extension we didn't already pre-sliced or loaded the file in memory
+
+see it like that<br>
+<br>
+HaveFile and FileList are for transferring big number of files<br>
+without overloading the memory or the hard drive<br>
+it's for archive<br>
+eg. I let you know that all this is available if you need it
+       
+AnnounceFile and RequestFile are for transferring a pre-known number<br>
+of files right away, eg. ready to connect and to share<br>
+it's for real time update right now<br>
+best example is for the updating the assets of an application<br>
+
+example:<br>
+multiplayer game with 50 different character animation<br>
+by default you embed in the app 1 generic character<br>
+if you're solo on the network you downloading the others 49 characters from a server<br>
+when others join the network you cna share with them all or some of the already downloaded<br>
+characters, on a local network it would speed up a LOT the download process<br>
+in general it would put less load on your server
 
 <br>
 <br>
