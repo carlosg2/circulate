@@ -36,46 +36,46 @@ for ex: favour `LocalNetworkArea` over `P2PLocalNetwork`
 
 === General ===
 
-A *NetworkSystem* connect/disconnect to a network.
+A *!NetworkSystem* connect/disconnect to a network.
 
-A *NetworkNode* allows to organise groups inside the network.
+A *!NetworkNode* allows to organise groups inside the network.
 
-A *NetworkClient* is the user attached to the group.
+A *!NetworkClient* is the user attached to the group.
 
-A *NetworkSystem* contains at least one *NetworkNode* or more.
+A *!NetworkSystem* contains at least one *NetworkNode* or more.
 
-A *NetworkNode* contains at least one *NetworkClient* or more.
+A *!NetworkNode* contains at least one *NetworkClient* or more.
 
 By default, the *NetworkSystem* and any *NetworkNode* always share one local client reference.
 
 === Command Center ===
 
-The *Command Center* is a special type of *NetworkNode*.
+The *Command Center* is a special type of *!NetworkNode*.
 
-As soon as a *NetworkSystem* creates a *NetConnection*<br>
-the system creates by default the *CommandCenter*.
+As soon as a *!NetworkSystem* creates a *!NetConnection*<br>
+the system creates by default the *!CommandCenter*.
 
-When a *NetworkSystem* disconnects we keep the *CommandCenter* reference in memory.
+When a *!NetworkSystem* disconnects we keep the *!CommandCenter* reference in memory.
 
-A *NetworkClient* can not create or destroy the *CommandCenter*.
+A *!NetworkClient* can not create or destroy the *!CommandCenter*.
 
-The *CommandCenter* always use the same *NetGroup* name and *GroupSpecifier*.
+The *!CommandCenter* always use the same *!NetGroup* name and *!GroupSpecifier*.
 
-We wire all the *NetworkCommand* trough the *CommandCenter* (hence the name).
+We wire all the *!NetworkCommand* trough the *!CommandCenter* (hence the name).
 
-Even if a *NetworkClient* is always connected to The *CommandCenter* it can still be invisible to other clients.
+Even if a *!NetworkClient* is always connected to The *!CommandCenter* it can still be invisible to other clients.
 
-Only an admin client can broadcast messages to every single connected *NetworkClient* (invisible or not)<br>
-trough the *CommandCenter*, but it does not mean that an admin can see an invisible client.
+Only an admin client can broadcast messages to every single connected *!NetworkClient* (invisible or not)<br>
+trough the *!CommandCenter*, but it does not mean that an admin can see an invisible client.
 
-A *NetworkSystem* is meant to work with the same *CommandCenter*,<br>
-you can not use more than one *CommandCenter*<br>
+A *!NetworkSystem* is meant to work with the same *!CommandCenter*,<br>
+you can not use more than one *!CommandCenter*<br>
 but for your own need you can rename it to any name you want.
 
 By default we use this name "library.circulate.commandcenter".
 
-The *CommandCenter* is structured in such a way
-  * to work almost like a *ChatNode* but it is not a *ChatNode*
+The *!CommandCenter* is structured in such a way
+  * to work almost like a *!ChatNode* but it is not a *!ChatNode*
   * to send commands as fast as possible
   * to scale up to 1000s of clients
   * to sync/announce/expire/update/etc. all connected clients
@@ -101,7 +101,7 @@ http://circulate.googlecode.com/svn/gfx/commandcenter_visualisation_test.png
 
 *scenario:* simple file sharing using a Node per file
 
-using commands AnnounceFile/RequestFile
+using commands *!AnnounceFile*/*!RequestFile*
   # user A announce he got file_123.mp4 (send trough command center)
   # this create a node OneFileNode with the name of the file
   # user A become a seeder on this node
@@ -128,47 +128,47 @@ using commands AnnounceFile/RequestFile
   * it share only one file<br>so we need a file manager on the side to manage list of files
        
        
-*misc:*
-on top of AnnounceFile/RequestFile<br>
-we could have HaveFile and FileList commands
+*misc:*<br>
+on top of *!AnnounceFile*/*!RequestFile*<br>
+we could also use *!HaveFile* and *!FileList* commands
 
-HaveFile would be to announce a file we have on the hard drive<br>
+*!HaveFile* would be to announce a file we have on the hard drive<br>
 but already shared in a node<br>
 if someone request the file then we can then Announce the file<br>
 and start to share it
        
-FileList would allow to share list of files we can share<br>
+*!FileList* would allow to share list of files we can share<br>
 without creating any node in the first place
 
 the difference is<br>
-AnnounceFile is for telling others we have a file ready to share<br>
+*!AnnounceFile* is for telling others we have a file ready to share<br>
 eg. either pre-sliced on the HDD or loaded in memory<br>
 in both case the node sharingthe file is already created<br>
-and wait for others (user using RequestFile) to connect to the node<br>
+and wait for others (user using !RequestFile) to connect to the node<br>
 while<br>
-HaveFile is for telling others that we have the file available<br>
+*!HaveFile* is for telling others that we have the file available<br>
 but it is not ready to share as the node to share the file is not created yet<br>
 and by extension we didn't already pre-sliced or loaded the file in memory
 
 see it like that<br>
 <br>
-HaveFile and FileList are for transferring big number of files<br>
+*!HaveFile* and *!FileList* are for transferring big number of files<br>
 without overloading the memory or the hard drive<br>
 it's for archive<br>
 eg. I let you know that all this is available if you need it
        
-AnnounceFile and RequestFile are for transferring a pre-known number<br>
+*!AnnounceFile* and *!RequestFile* are for transferring a pre-known number<br>
 of files right away, eg. ready to connect and to share<br>
 it's for real time update right now<br>
 best example is for the updating the assets of an application<br>
 
 example:<br>
 multiplayer game with 50 different character animation<br>
-by default you embed in the app 1 generic character<br>
+by default you embed in the app only 1 generic character (eg. 50MB limit on mobile)<br>
 if you're solo on the network you downloading the others 49 characters from a server<br>
 when others join the network you cna share with them all or some of the already downloaded<br>
 characters, on a local network it would speed up a LOT the download process<br>
-in general it would put less load on your server
+in general it would put less load on your server or simply not use a server at all.
 
 <br>
 <br>
