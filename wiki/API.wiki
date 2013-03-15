@@ -103,7 +103,7 @@ http://circulate.googlecode.com/svn/gfx/commandcenter_visualisation_test.png
 
 using commands *!AnnounceFile*/*!RequestFile*
   # user A announce he got `file_123.mp4` (send trough command center)
-  # this create a node OneFileNode with the name of the file
+  # this create a node !OneFileNode with the name of the file
   # user A become a seeder on this node
   # user B request `file_123.mp4` (again trough command center)
   # user B become a leecher on this node
@@ -148,14 +148,14 @@ and wait for others (user using !RequestFile) to connect to the node<br>
 while<br>
 *!HaveFile* is for telling others that we have the file available<br>
 but it is not ready to share as the node to share the file is not created yet<br>
-and by extension we didn't already pre-sliced or loaded the file in memory
+and by extension we didn't already pre-sliced or loaded the file in memory<br>
 
 see it like that<br>
 <br>
 *!HaveFile* and *!FileList* are for transferring big number of files<br>
 without overloading the memory or the hard drive<br>
 it's for archive<br>
-eg. I let you know that all this is available if you need it
+eg. I let you know that all this is available if you need it<br>
        
 *!AnnounceFile* and *!RequestFile* are for transferring a pre-known number<br>
 of files right away, eg. ready to connect and to share<br>
