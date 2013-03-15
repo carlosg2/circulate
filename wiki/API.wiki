@@ -42,11 +42,11 @@ A *!NetworkNode* allows to organise groups inside the network.
 
 A *!NetworkClient* is the user attached to the group.
 
-A *!NetworkSystem* contains at least one *NetworkNode* or more.
+A *!NetworkSystem* contains at least one *!NetworkNode* or more.
 
-A *!NetworkNode* contains at least one *NetworkClient* or more.
+A *!NetworkNode* contains at least one *!NetworkClient* or more.
 
-By default, the *NetworkSystem* and any *NetworkNode* always share one local client reference.
+By default, the *!NetworkSystem* and any *!NetworkNode* always share one local client reference.
 
 === Command Center ===
 
@@ -102,14 +102,14 @@ http://circulate.googlecode.com/svn/gfx/commandcenter_visualisation_test.png
 *scenario:* simple file sharing using a Node per file
 
 using commands *!AnnounceFile*/*!RequestFile*
-  # user A announce he got file_123.mp4 (send trough command center)
+  # user A announce he got `file_123.mp4` (send trough command center)
   # this create a node OneFileNode with the name of the file
   # user A become a seeder on this node
-  # user B request file_123.mp4 (again trough command center)
+  # user B request `file_123.mp4` (again trough command center)
   # user B become a leecher on this node
    
 *pros:*
-  * because the node share only one file<br>it simpler to have chunk[0] containing the metadata of the file<br>and split the file in chunks
+  * because the node share only one file<br>it simpler to have `chunk[0]` containing the metadata of the file<br>and split the file in chunks
   * the file does not necessary need to be loaded in memory<br>it could be pre-sliced on the hard drive
     {{{
           eg. files/
@@ -130,15 +130,15 @@ using commands *!AnnounceFile*/*!RequestFile*
        
 *misc:*<br>
 on top of *!AnnounceFile*/*!RequestFile*<br>
-we could also use *!HaveFile* and *!FileList* commands
+we could also use *!HaveFile* and *!FileList* commands<br>
 
 *!HaveFile* would be to announce a file we have on the hard drive<br>
 but already shared in a node<br>
 if someone request the file then we can then Announce the file<br>
-and start to share it
+and start to share it<br>
        
 *!FileList* would allow to share list of files we can share<br>
-without creating any node in the first place
+without creating any node in the first place<br>
 
 the difference is<br>
 *!AnnounceFile* is for telling others we have a file ready to share<br>
@@ -224,7 +224,7 @@ which allows to transport a Command in such a way<br>
 it can be automatically serialized/deserialized ( using AMF and !ByteArray).
 
 *Message*:<br>
-ActionScript message serialized in AMF.<br>
+!ActionScript message serialized in AMF.<br>
 The message can be one of the following types: an Object, an int, a Number, or a String.<br>
 The message cannot be a MovieClip.
 
